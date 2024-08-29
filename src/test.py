@@ -31,6 +31,7 @@ async def test_7seg(dut):
         assert int(dut.segments.value) == segments[i % 10]
 
         # all bidirectionals are set to output
+        print(f"Actual value of uio_oe: {dut.uio_oe.value}")
         assert dut.uio_oe == 0xFF
 
     # reset
